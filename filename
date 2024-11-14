@@ -1,0 +1,6 @@
+myremote="https://github.com/tempcntrl/cs2080gitlesson.git"
+git clone ${myremote}
+cd my_unix
+1-4
+
+

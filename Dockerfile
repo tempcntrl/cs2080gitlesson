@@ -1,20 +1,16 @@
 FROM ubuntu
 
-#RUN mkdir /bin
+RUN apt-get update -y
+RUN apt-get install -y vim
+RUN apt-get install -y nginx
 
-COPY assignment.sh /bin/
 
-RUN chmod +x /bin/assignment.sh
+COPY a7app.sh /usr/local/bin/a7app.sh
 
-RUN chmod +rwx -R /bin
 
-RUN /bin/assignment.sh
+RUN chmod +x /usr/local/bin/a7app.sh
 
-RUN apt update
-
-RUN apt install -y nginx
-
-RUN service nginx start`
+CMD ["/usr/local/bin/a7app.sh"]
 
 
 
